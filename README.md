@@ -7,6 +7,12 @@ DRF ToDo API
 ## Run the test
 `./manage.py test`
 
+## Coverage
+```
+coverage run manage.py test
+coverage report -m
+```
+
 ## Run the linter
 `ruff check . --fix`
 
