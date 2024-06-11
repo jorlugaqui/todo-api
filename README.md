@@ -1,20 +1,23 @@
 # todo-api
 DRF ToDo API
 
-## Run the project
-`./manage.py runserver`
+## Run the project (db)
+`docker compose up -d db`
+
+## Run the API
+`docker compose up api`
+
 
 ## Run the test
-`./manage.py test`
+`docker compose exec api python manage.py test --settings=todoapp.settings.ci`
 
 ## Coverage
 ```
-coverage run manage.py test
-coverage report -m
+docker compose exec api coverage run manage.py test --settings=todoapp.settings.ci && coverage report -m
 ```
 
 ## Run the linter
-`ruff check . --fix`
+`docker compose exec api ruff check . --fix`
 
 ## Run the formatter
-`ruff format .`
+`docker compose exec api ruff format .`
