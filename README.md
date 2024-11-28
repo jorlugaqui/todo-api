@@ -7,7 +7,6 @@ DRF ToDo API
 ## Run the API
 `docker compose up api`
 
-
 ## Run the test
 `docker compose exec api python manage.py test --settings=todoapp.settings.ci`
 
