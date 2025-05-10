@@ -15,6 +15,8 @@ DEBUG = config("DEBUG", False, cast=bool)
 
 ALLOWED_HOSTS = config("DJANGO_ALLOWED_HOSTS").split()
 
+CSRF_TRUSTED_ORIGINS = ["https://*.railway.app"]
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
